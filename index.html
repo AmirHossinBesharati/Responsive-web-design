@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js course</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <!-- top bar -->
+        <div class="top-bar">
+            <div class="top-bar-row">
+                <div class="top-bar-items">
+                    <ul>
+                        <li>
+                            <a href="#" class="mini-cart-opener">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span class="reactapp-cart-number">0</span>
+                            </a>
+                            <!-- shopping-cart-box -->
+                            <div class="shopping-cart-box">
+                                <!-- shopping-cart-items -->
+                                <div class="shopping-cart-items">
+                                    
+                                </div>
+                                <!-- shopping-cart-items -->
+                                <!-- shopping-cart-bottom -->
+                                <div class="shopping-cart-bottom">
+                                    <p class="shopping-cart-total">
+                                       
+                                    </p>
+                                    <div class="shopping-cart-buttons">
+                                        <a href="#" class="button wc-forward">مشاهده سبد خرید</a>
+                                        <a href="#" class="button checkout wc-forward">تسویه حساب</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- shopping-cart-bottom -->
+                            </div>
+                            <!-- shopping-cart-box -->
+                        </li>
+                        <li><i class="fas fa-search" id="toggleSearch"></i></li>
+                        <li>درباره ما</li>
+                        <li>تماس با ما</li>
+                    </ul>
+                </div>
+                <div class="top-bar-items-mobile">
+                    <ul>
+                        <li>
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="reactapp-cart-number">0</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-circle"></i>
+                        </li>
+                    </ul>
+                 
+                </div>
+            </div>
+            
+        </div>
+        <!-- top bar -->
+        <!-- global-header -->
+        <header class="global-header">
+            <!-- header-row -->
+            <div class="header-row">
+                <!-- global-logo -->
+                <div class="global-logo">
+                    <a href="#">
+                        <img src="./assets/logo.png" />
+                    </a>
+                </div>
+                 <!-- global-logo -->
+                 <!-- nav-menu -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#">صفحه اصلی</a></li>
+                        <li><a href="#" id="courses">دوره ها</a><i class="fa fa-angle-down"></i></li>
+                        <!-- sub-nav -->
+                        <div class="sub-nav">
+                            <div class="sub-nav-col left">
+                                <a href="#" class="sub-nav-box" id="box1">
+                                    <div class="icon-background" id="icon-1">
+                                        <i class="fab fa-sellsy icon"></i>
+                                    </div>
+                                    <h4>راهنمای یادگیری</h4>
+                                    <p>گام های یادگیری</p>
+                                </a>
+                                <a href="#" class="sub-nav-box" id="box2">
+                                    <div class="icon-background" id="icon-2">
+                                        <i class="fab fa-sellsy icon"></i>
+                                    </div>
+                                    <h4>راهنمای یادگیری</h4>
+                                    <p>گام های یادگیری</p>
+                                </a>
+                            </div>
+                            <div class="sub-nav-col right">
+                                <a href="#" class="sub-nav-box" id="box3">
+                                    <div class="icon-background" id="icon-3">
+                                        <i class="fab fa-sellsy icon"></i>
+                                    </div>
+                                    <h4>راهنمای یادگیری</h4>
+                                    <p>گام های یادگیری</p>
+                                </a>
+                                <a href="#" class="sub-nav-box" id="box4">
+                                    <div class="icon-background" id="icon-4">
+                                        <i class="fab fa-sellsy icon"></i>
+                                    </div>
+                                    <h4>راهنمای یادگیری</h4>
+                                    <p>گام های یادگیری</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- sub-nav -->
+                        <li><a href="#">بلاگ</a></li>
+                        <li><a href="#">تالار گفتمان</a></li>
+                        <li><a href="#">کانال تلگرام</a></li>
+                    </ul>
+                </nav>
+                <!-- nav-menu -->
+                <!-- signup-button -->
+                <div class="header-button-link">
+                    <i class="fas fa-user-lock"></i>
+                    <span>ورود و ثبت نام</span>
+                </div>
+                  <!-- signup-button -->
+                  <!-- menu-icon -->
+                  <div class="menu-icon">
+                      <i class="fa fa-bars" id="openMenu"></i>
+                      <i class="fa fa-times" id="closeMenu"></i>
+                  </div>
+                  <!-- menu-icon -->
+            </div>
+            <!-- header-row -->
+            <!-- search-row -->
+            <div class="search-row">
+                <form method="get" class="search-form" action="https://reactapp.ir">
+                    <input type="search" class="search-input" placeholder="جستجوی دوره، استاد، مطالب و ..." value="" name="s" />
+                    <button type="submit" class="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- search-row -->
+        </header>
+         <!-- global-header -->
+         <!-- nav -->
+         <nav id="nav">
+            <ul>
+                <li>
+                    
+                        <form role="search" method="get" class="search-form" action="https://reactapp.ir/">
+                            
+                            <input type="search" class="search-field" placeholder="ورود واژه کلیدی ..." value="" name="s" title="جستجو برای:">
+                            <button type="submit" class="search-submit">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </form>
+                 
+                </li>
+                <li>
+                    <div class="off-canvas-cart">
+                        <a href="https://reactapp.ir/cart/" class="cart-icon-link">
+                            <span class="bag-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+                                <path d="M93.064,44.523l3.5,58.432H31.437l3.804-58.432h6.239l-0.304,6.543l0,0l-2.587,45.346h51.584l-2.891-45.346
+                                        h-6.848v6.391h-6.543V41.328c0-2.839-0.939-5.174-2.815-7c-1.878-1.826-4.185-2.739-6.924-2.739s-5.048,0.913-6.924,2.739
+                                        c-1.878,1.826-2.815,4.161-2.815,7v3.195h12.934v6.543H54.414v6.391h-6.543V41.328c0-4.565,1.571-8.419,4.717-11.565
+                                        c3.144-3.143,7-4.717,11.565-4.717c4.565,0,8.419,1.574,11.564,4.717c3.144,3.146,4.718,7,4.718,11.565v3.195H93.064z"></path>
+                            </svg>
+                            </span>
+                            <span class="cart-text">سبد خرید</span>
+                                    <span class="studiare-cart-number">0</span>
+                                </a>
+                    </div>
+                </li>
+              
+                <li>
+                    <a href="/">صفحه اصلی</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">دوره ها</a>
+                    <i class="fa fa-angle-left"></i>
+                    <ul>
+                        <li>گام های یادگیری</li>
+                        <li>گام های یادگیری</li>
+                        <li>گام های یادگیری</li>
+                    </ul>
+                </li>
+                <li><a href="#">بلاگ</a></li>
+                <li><a href="#">تالار گفتمان</a></li>
+                <li><a href="#">کانال تلگرام</a></li>
+            </ul>
+        </nav>   
+         <!-- nav -->
+         <!-- container -->
+         <div class="container">
+             <!-- main-pic-container -->
+             <div class="main-pic-container">
+                <img src="./assets/jspic.jpg" alt="main-pic" id="main-pic" />
+                <div class="countdown-container">
+                    <h1>
+                        انتشار دوره پیشرفته و جامع جاوا اسکریپت
+                    </h1>
+                    <div class="countdown-item">
+                        <div>
+                            <p class="big-text" id="days">0</p>
+                            <span>روز</span>
+                        </div>
+                        <div>
+                            <p class="big-text" id="hours">0</p>
+                            <span>ساعت</span>
+                        </div>
+                        <div>
+                            <p class="big-text" id="minutes">0</p>
+                            <span>دقیقه</span>
+                        </div>
+                        <div>
+                            <p class="big-text" id="seconds">0</p>
+                            <span>ثانیه</span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <!-- main-pic-container -->
+             <!-- row -->
+             <div class="row">
+                <!-- featured-course -->
+                <div class="featured-course">
+                    <!-- seprator -->
+                    <div class="seprator">
+                        <span class="seprator-holder">
+                            <span class="vc-line"></span>
+                        </span>
+                        <h4>دوره های  پیشنهادی</h4>
+                        <span class="seprator-holder">
+                            <span class="vc-line"></span>
+                        </span>
+                    </div>
+                    <!-- seprator -->
+                    <!-- featured-course-container -->
+                    <div class="featured-course-container">
+                        <!-- course -->
+                        <div class="course">
+                            <!-- thumnail-course-holder -->
+                            <div class="thumnail-course-holder">
+                                <img src="https://reactapp.ir/wp-content/uploads/dore3-400x229.jpg" alt="react native course" />
+                                <div class="video-button">
+                                    <a href="#" class="cdb-video-icon">
+                                        <i class="fas fa-play"></i>
+                                    </a>
+                                </div>
+                                <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                    <i class="fas fa-user-plus"></i>
+                                </a>
+                            </div>
+                            <!-- thumnail-course-holder -->
+                            <!-- course-content-holder -->
+                            <div class="course-content-holder">
+                                <div class="course-content-main">
+                                    <div class="course-top-content">
+                                        <h3 class="course-title">
+                                            <a href="#">
+                                                آموزش مقدماتی react native
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="course-rating-teacher">
+                                        <div class="teacher-box">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <a href="#">علی</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-bottom-contetn">
+                                        <div class="course-students">
+                                            <i class="fas fa-users"><span>4,236</span></i>
+                                        </div>
+                                        <div class="course-price">
+                                            <span class="price">
+                                                <span class="amount">رایگان!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- course-content-holder -->
+                        </div>
+                        <!-- course -->
+                        <!-- course -->
+                        <div class="course">
+                            <!-- thumnail-course-holder -->
+                            <div class="thumnail-course-holder">
+                                <img src="https://reactapp.ir/wp-content/uploads/nodejs.png" alt="react native course" />
+                                <div class="video-button">
+                                    <a href="#" class="cdb-video-icon">
+                                        <i class="fas fa-play"></i>
+                                    </a>
+                                </div>
+                                <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                    <i class="fas fa-user-plus"></i>
+                                </a>
+                            </div>
+                            <!-- thumnail-course-holder -->
+                            <!-- course-content-holder -->
+                            <div class="course-content-holder">
+                                <div class="course-content-main">
+                                    <div class="course-top-content">
+                                        <h3 class="course-title">
+                                            <a href="#">
+                                                آموزش جامع و پروژه محور Nodejs
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="course-rating-teacher">
+                                        <div class="teacher-box">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <a href="#">علی</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-bottom-contetn">
+                                        <div class="course-students">
+                                            <i class="fas fa-users"><span>306</span></i>
+                                        </div>
+                                        <div class="course-price">
+                                            <span class="price">
+                                                <span class="amount">119000</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- course-content-holder -->
+                        </div>
+                        <!-- course -->
+                        <!-- course -->
+                        <div class="course">
+                            <!-- thumnail-course-holder -->
+                            <div class="thumnail-course-holder">
+                                <img src="https://reactapp.ir/wp-content/uploads/react-1-400x229.jpg" alt="react native course" />
+                                <div class="video-button">
+                                    <a href="#" class="cdb-video-icon">
+                                        <i class="fas fa-play"></i>
+                                    </a>
+                                </div>
+                                <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                    <i class="fas fa-user-plus"></i>
+                                </a>
+                            </div>
+                            <!-- thumnail-course-holder -->
+                            <!-- course-content-holder -->
+                            <div class="course-content-holder">
+                                <div class="course-content-main">
+                                    <div class="course-top-content">
+                                        <h3 class="course-title">
+                                            <a href="#">
+                                                آموزش جامع react js
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="course-rating-teacher">
+                                        <div class="teacher-box">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <a href="#">مهدی</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-bottom-contetn">
+                                        <div class="course-students">
+                                            <i class="fas fa-users"><span>395</span></i>
+                                        </div>
+                                        <div class="course-price">
+                                            <span class="price">
+                                                <span class="amount">119000</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- course-content-holder -->
+                        </div>
+                        <!-- course -->
+                        <!-- course -->
+                        <div class="course">
+                            <!-- thumnail-course-holder -->
+                            <div class="thumnail-course-holder">
+                                <img src="https://reactapp.ir/wp-content/uploads/digikala_course-400x229.png" alt="react native course" />
+                                <div class="video-button">
+                                    <a href="#" class="cdb-video-icon">
+                                        <i class="fas fa-play"></i>
+                                    </a>
+                                </div>
+                                <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                    <i class="fas fa-user-plus"></i>
+                                </a>
+                            </div>
+                            <!-- thumnail-course-holder -->
+                            <!-- course-content-holder -->
+                            <div class="course-content-holder">
+                                <div class="course-content-main">
+                                    <div class="course-top-content">
+                                        <h3 class="course-title">
+                                            <a href="#">
+                                                آموزش React Native – ساخت اپلیکیشن فروشگاهی مشابه دیجی کالا
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="course-rating-teacher">
+                                        <div class="teacher-box">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <a href="#">مهدی</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-bottom-contetn">
+                                        <div class="course-students">
+                                            <i class="fas fa-users"><span>311</span></i>
+                                        </div>
+                                        <div class="course-price">
+                                            <span class="price">
+                                                <span class="amount">289000</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- course-content-holder -->
+                        </div>
+                        <!-- course -->
+                    </div>
+                    <!-- featured-course-container -->
+                </div>
+                <!-- featured-course -->
+                 <!-- seprator -->
+                 <div class="seprator">
+                    <span class="seprator-holder">
+                        <span class="vc-line"></span>
+                    </span>
+                    <h4>  جدیدترین دوره ها </h4>
+                    <span class="seprator-holder">
+                        <span class="vc-line"></span>
+                    </span>
+                </div>
+                <!-- seprator -->
+                <!-- newest-course-container -->
+                <div class="newest-course-container">
+                    <i class="fas fa-angle-right"></i>
+                    <div class="newest-course">
+                        <div class="course-container">
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/dore3-400x229.jpg" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش مقدماتی react native
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">علی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>4,236</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">رایگان!</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/nodejs.png" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش جامع و پروژه محور Nodejs
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">علی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>306</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">119000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/react-1-400x229.jpg" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش جامع react js
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">مهدی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>395</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">119000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/digikala_course-400x229.png" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش React Native – ساخت اپلیکیشن فروشگاهی مشابه دیجی کالا
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">مهدی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>311</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">289000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/dore3-400x229.jpg" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش مقدماتی react native
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">علی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>4,236</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">رایگان!</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/nodejs.png" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش جامع و پروژه محور Nodejs
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">علی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>306</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">119000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/react-1-400x229.jpg" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش جامع react js
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">مهدی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>395</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">119000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                            <!-- course -->
+                            <div class="course">
+                                <!-- thumnail-course-holder -->
+                                <div class="thumnail-course-holder">
+                                    <img src="https://reactapp.ir/wp-content/uploads/digikala_course-400x229.png" alt="react native course" />
+                                    <div class="video-button">
+                                        <a href="#" class="cdb-video-icon">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" title="ثبت نام در دوره" class="add-to-cart">
+                                        <i class="fas fa-user-plus"></i>
+                                    </a>
+                                </div>
+                                <!-- thumnail-course-holder -->
+                                <!-- course-content-holder -->
+                                <div class="course-content-holder">
+                                    <div class="course-content-main">
+                                        <div class="course-top-content">
+                                            <h3 class="course-title">
+                                                <a href="#">
+                                                    آموزش React Native – ساخت اپلیکیشن فروشگاهی مشابه دیجی کالا
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="course-rating-teacher">
+                                            <div class="teacher-box">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                                <a href="#">مهدی</a>
+                                            </div>
+                                        </div>
+                                        <div class="course-bottom-contetn">
+                                            <div class="course-students">
+                                                <i class="fas fa-users"><span>311</span></i>
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price">
+                                                    <span class="amount">289000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- course-content-holder -->
+                            </div>
+                            <!-- course -->
+                        </div>
+                    </div>
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <!-- newest-course-container -->
+
+                 <!-- seprator -->
+                 <div class="seprator">
+                    <span class="seprator-holder">
+                        <span class="vc-line"></span>
+                    </span>
+                    <h4>  نظرات کاربران </h4>
+                    <span class="seprator-holder">
+                        <span class="vc-line"></span>
+                    </span>
+                </div>
+                <!-- seprator -->
+                <!-- user comments -->
+                <div class="user-comments">
+                    <!-- comments-container -->
+                    <div class="comments-container">
+                        <!-- comment -->
+                        <div class="comment" id="0">
+                            <div class="user-pic-box">
+                                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=694&q=80" alt="" />  
+                            </div>
+                            <p>
+                               0  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                            </p>
+                        </div>
+                        <!-- comment -->
+                        <!-- comment -->
+                        <div class="comment" id="1">
+                            <div class="user-pic-box">
+                                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=694&q=80" alt="" />  
+                            </div>
+                            <p>
+                                 1لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                            </p>
+                        </div>
+                        <!-- comment -->
+                        <!-- comment -->
+                        <div class="comment" id="2">
+                            <div class="user-pic-box">
+                                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=694&q=80" alt="" />  
+                            </div>
+                            <p>
+                                2 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                            </p>
+                        </div>
+                        <!-- comment -->
+                        <!-- comment -->
+                        <div class="comment" id="3">
+                            <div class="user-pic-box">
+                                <img src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=694&q=80" alt="" />  
+                            </div>
+                            <p>
+                            3     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                            </p>
+                        </div>
+                        <!-- comment -->
+
+                    </div>
+                    <!-- comments-container -->
+                    <div class="dots-container">
+
+                    </div>
+                </div>
+                <!-- user comments -->
+             </div>
+             <!-- row -->
+              <!-- footer -->
+  
+         <div class="waves black"></div>
+         <div class="waves yellow"></div>
+         <footer>
+            <div class="row">
+                <!-- footer-widget-col -->
+                <div class="footer-widget-col">
+                    <!-- contact -->
+                        <div class="contact">
+                            <h5 class="contact-title">ارتباط با ما</h5>
+                            <ul>
+                                <li>
+                                    <div class="contact-info-icon"><i class="fas fa-mobile"></i></div>
+                                    <div class="contact-info-value">09150274110</div>
+                                </li>
+                                <li>
+                                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                                    <div class="contact-info-value"><a href="mailto:contact@reactapp.ir">contact@reactapp.ir</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    <!-- contact -->
+                    <!-- social-network -->
+                    <div class="social-network">
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <!-- social-network -->
+                     <!-- quick access -->
+                     <div class="quick-access">
+                        <h5 class="title"> دسترسی سریع</h5>
+                        <ul>
+                            <li>
+                                <span>بلاگ</span>
+                            </li>
+                            <li>
+                                <span>تله فیلم آموزشی</span>
+                            </li>
+                        </ul>
+                    </div>
+                <!-- quick access -->
+                </div>
+                 <!-- footer-widget-col -->
+                  <!-- footer-widget-col -->
+                <div class="footer-widget-col">
+                    <!-- text -->
+                    <div class="text">
+                        <p>
+                            تیم reactapp تمام تلاش خودش رو انجام میده تا محتوایی با کیفیت و به روز رو در اختیار علاقه مندان به حوزه جاوااسکریپت قرار بده. چیدمان تمامی آموزش های ویدئویی و مقالات به نحوی هست که شمارو به سمت بازار کار سوق بده تا هر چه سریع تر به عنوان یک نیرو فنی در بازار کار مشغول به فعالیت شده و به درآمد زایی برسید.
+                        </p>
+                    </div>
+                    <!-- text -->
+                    <!-- bank-portal -->
+                    <div class="bank-portal">
+                        <img src="./assets/1.svg" alt="zarinpal" />
+                        <img src="./assets/2.svg" alt="pa" />
+
+                    </div>
+                    <!-- bank-portal -->
+                </div>
+                 <!-- footer-widget-col -->
+                 
+            </div>
+          
+                <!-- copyright -->
+                <div class="copy-right">
+                    <p>
+                        کلیه حقوق محفوظ و متعلق به reactapp.ir می باشد
+                    </p>
+                </div>
+                <!-- copyright -->
+          
+         </footer>
+     
+     
+        <!-- footer -->
+         </div>
+         <!-- container -->
+        <!-- backToTop -->
+        <div class="back-to-top">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- backToTop -->
+       <!-- popup -->
+       <div class="popup">
+           <div class="header">
+               <h2>ورود</h2>
+               <i class="fa fa-times"></i>
+           </div>
+           <form class="form" id="form">
+               <div class="form-control">
+                    <label>نام کاربری</label>
+                    <input
+                        type="email"
+                        id="username"
+                        placeholder="example.com"
+                        />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>پیغام خطا</small>
+               </div>
+               <div class="form-control">
+                <label> رمز عبور</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="***"
+                    />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>پیغام خطا</small>
+           </div>
+            <div class="form-control">
+                <div id="recaptha-box">
+                    <div class="g-recaptcha"
+                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    >
+                    </div>
+                    <small></small>
+                </div>
+                
+           </div>
+           <div class="form-control">
+               <button>
+                   ورود
+               </button>
+           </div>
+           </form>
+       </div>
+       <!-- popup -->
+       <script src="https://www.google.com/recaptcha/api.js?hl=fa" async defer></script>
+        <script src="code.js"></script>
+    </body>
+</html>
